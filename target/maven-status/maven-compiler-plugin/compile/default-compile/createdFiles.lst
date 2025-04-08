@@ -1,0 +1,5 @@
+com/mycompany/sudoku/dio/SudokuDio.class
+com/mycompany/sudoku/dio/funcionamento/Espaco.class
+com/mycompany/sudoku/dio/funcionamento/PainelTemplate.class
+com/mycompany/sudoku/dio/funcionamento/StatusEnum.class
+com/mycompany/sudoku/dio/funcionamento/Painel.class
