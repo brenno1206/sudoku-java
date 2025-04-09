@@ -1,5 +1,7 @@
 package br.com.brenno.ui.custom.input;
 
+import br.com.brenno.service.EventEnum;
+import br.com.brenno.service.EventListener;
 import br.com.brenno.util.Espaco;
 
 import javax.swing.*;
@@ -7,7 +9,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
 
-public class NumberText extends JTextField {
+public class NumberText extends JTextField implements EventListener {
     private final Espaco espaco;
 
     public NumberText(final Espaco espaco) {
@@ -47,5 +49,12 @@ public class NumberText extends JTextField {
                 }
             }
         });
+    }
+
+    @Override
+    public void update(EventEnum eventType) {
+        if (eventType.equals(EventEnum.CLEAR_SPACE) && this.isEnabled()) {
+            this.setText("");
+        }
     }
 }
